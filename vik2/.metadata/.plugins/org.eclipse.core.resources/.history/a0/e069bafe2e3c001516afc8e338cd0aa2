@@ -1,0 +1,19 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.util.Properties;
+
+
+public class DBUtil {
+
+	public static Connection openConnection() throws FileNotFoundException, IOException {
+		
+		Properties p = new Properties();
+		p.load(new FileInputStream("DriverInfo.properties"));
+	    String driver = p.getProperty("driver");
+	    
+	
+	}
+
+}

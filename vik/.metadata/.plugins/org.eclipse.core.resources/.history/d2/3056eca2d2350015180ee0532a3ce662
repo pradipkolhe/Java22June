@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="HttpservletDemo">
+Name:<input type="text" name="name" value=""/><br>
+PWD:<input type="text" name="pwd" value=""/><br>
+<input type="submit" name ="login" value="login"/>
+
+</form>
+</body>
+</html>

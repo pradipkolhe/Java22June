@@ -1,0 +1,38 @@
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class CheckLogin extends HttpServlet {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String un=request.getParameter("user");
+		String pass=request.getParameter("pass");
+		PrintWriter out=response.getWriter();
+		if(un.equals("ABC") && pass.equals("ABC")){
+			HttpSession s=request.getSession();
+			s.setAttribute("user", un);
+			out.println("<html>");
+			out.println("<head>");
+				out.println("<title>Login Page</title");
+			out.println("</head>");
+				out.println("<body>");
+					out.println("<center>");
+					out.println("<a href='Home'> | Home | </a>");
+					out.println("<a href='AbouUs'>  About Us | </a>");
+					out.println("</center>");
+					out.println("</body>");
+			out.println("</html>");
+		}
+		else{
+			response.sendRedirect("Login");
+		}
+	}
+
+}

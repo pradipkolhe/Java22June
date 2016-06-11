@@ -1,0 +1,12 @@
+import java.util.Properties;
+
+
+public class DBUtil {
+
+	public static void main(String[] args) {
+		
+		
+		Properties p = new Properties();
+	}
+
+}

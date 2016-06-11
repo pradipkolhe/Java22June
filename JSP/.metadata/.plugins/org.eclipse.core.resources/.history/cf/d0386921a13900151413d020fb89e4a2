@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<c:set var="i" value="10"></c:set>
+
+i : <c:out value="${i}"></c:out>
+<br/>
+<c:if test="${i lt 100}">
+<c:out value="i is less than 100"></c:out>
+</c:if>
+<br/>
+
+<c:set var="names">ABC,XYZ,LMN,PQR,STU</c:set>
+<c:forEach var="s" items="${names}">
+	<c:out value="${s}"></c:out><br/>
+</c:forEach>
+
+<c:catch var="e">
+	<%= 10/0 %>
+</c:catch>
+</body>
+</html>

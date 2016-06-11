@@ -1,0 +1,18 @@
+
+public class InterfaceDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+@FunctionalInterface
+
+interface A{
+	
+	void m1();
+	
+	void m2();
+}

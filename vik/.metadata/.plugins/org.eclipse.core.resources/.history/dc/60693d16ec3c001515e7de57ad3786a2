@@ -1,0 +1,23 @@
+
+public class InterfaceDemo {
+
+	public static void main(String[] args) {
+		
+		
+		A a = (i)->{
+			
+			System.out.println("from A");
+		}
+
+	}
+
+}
+
+
+@FunctionalInterface
+
+interface A{
+	
+	void m1(int i);
+	
+}

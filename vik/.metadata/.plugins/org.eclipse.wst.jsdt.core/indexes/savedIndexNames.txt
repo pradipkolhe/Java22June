@@ -1,0 +1,14 @@
+INDEX VERSION 1.3+D:\Java22June\vik\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1659701703.index
+1503628877.index
+2158986206.index
+2769470013.index
+4066803413.index
+450842256.index
+1874053409.index
+2851373832.index
+1598372392.index
+1175695356.index
+2925890358.index
+2554525233.index
+962466075.index

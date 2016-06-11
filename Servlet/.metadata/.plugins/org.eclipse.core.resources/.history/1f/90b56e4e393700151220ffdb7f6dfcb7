@@ -1,0 +1,27 @@
+
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SaveUser extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String name=request.getParameter("user");
+		String contact=request.getParameter("contact");
+		String email=request.getParameter("email");
+		String pass=request.getParameter("pass");
+		System.out.println("name : "+name);
+		System.out.println("Contact : "+contact);
+		System.out.println("Email : "+email);
+		try{
+			// JDBC code to save user Data
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+
+}

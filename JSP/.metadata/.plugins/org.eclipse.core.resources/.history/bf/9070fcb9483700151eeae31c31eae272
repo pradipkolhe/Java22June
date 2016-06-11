@@ -1,0 +1,11 @@
+<%
+	String name=request.getParameter("user");
+	String pass=request.getParameter("pass");
+	if(name.equals("ABC") && pass.equals("ABC")){
+		response.sendRedirect("Welcome.jsp");
+	}
+	else{
+		response.sendRedirect("Login.jsp");
+	}
+
+%>

@@ -1,0 +1,22 @@
+package model;
+
+public class StudModel {
+
+	
+	public void saveInfo(int id,String name,String contact,String email)
+	{
+		
+	}
+	public void updateInfo()
+	{
+		
+	}
+	public void deleteInfo()
+	{
+		
+	}
+	public void getInfo()
+	{
+		
+	}
+}

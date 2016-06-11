@@ -1,0 +1,39 @@
+package controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import bean.Student;
+import model.StudModel;
+
+@WebServlet("/SaveInfo")
+public class SaveInfo extends HttpServlet {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int id=Integer.parseInt(request.getParameter("id"));
+		String name=request.getParameter("name");
+		String contact=request.getParameter("contact");
+		String email=request.getParameter("email");
+		
+		Student s=new Student();
+		s.setId(id);
+		s.setName(name);
+		s.setContact(contact);
+		s.setEmail(email);
+		
+		StudModel model=new StudModel();
+		String r=model.saveInfo(s);
+		if(r.equals("success")){
+			response.sendRedirect("Home.jsp?msg=Register Successfully");
+		}
+		else{
+			response.sendRedirect("Home.jsp?msg=Register Fail...");
+		}
+		System.out.println("i am in saveinfo cotroller");
+	}
+
+}

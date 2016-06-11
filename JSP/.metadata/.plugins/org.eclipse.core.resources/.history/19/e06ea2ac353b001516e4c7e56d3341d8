@@ -1,0 +1,27 @@
+package model;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+import bean.Student;
+public class StudModel {
+
+	public String saveInfo(Student stud)
+	{
+		String result="fail";
+		//DB code to save info
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection c=DriverManager.getConnection("","","");
+			PreparedStatement ps=c.prepareStatement("");
+			int count=ps.executeUpdate();
+			c.close();
+			ps.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+}

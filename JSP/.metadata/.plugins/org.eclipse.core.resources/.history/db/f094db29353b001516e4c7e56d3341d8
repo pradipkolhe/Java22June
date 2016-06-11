@@ -1,0 +1,13 @@
+package model;
+import bean.Student;
+public class StudModel {
+
+	public String saveInfo(Student stud)
+	{
+		String result="fail";
+		
+		//DB code to save info
+		return result;
+	}
+	
+}

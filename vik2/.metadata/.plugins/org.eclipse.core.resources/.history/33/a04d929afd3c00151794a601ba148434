@@ -1,0 +1,27 @@
+
+public class InterfaceDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		 A a = new A() {
+			
+			@Override
+			public void m1(int i) {
+				// TODO Auto-generated method stub
+				
+			}
+		};
+	}
+
+}
+
+@FunctionalInterface
+
+interface A{
+	
+	void m1(int i);
+	
+
+}

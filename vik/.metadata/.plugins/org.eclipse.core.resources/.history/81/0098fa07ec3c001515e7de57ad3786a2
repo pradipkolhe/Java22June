@@ -1,0 +1,20 @@
+
+public class InterfaceDemo {
+
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+
+}
+
+
+@FunctionalInterface
+
+interface A{
+	
+	void m1();
+	
+}

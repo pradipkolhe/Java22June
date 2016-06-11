@@ -1,0 +1,37 @@
+<%@page import="bean.Student"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="2" height="300" width="300">
+<th>
+	<tr>
+		<td>ID</td>
+		<td>Name</td>
+		<td>Contact</td>
+		<td>Email</td>
+	</tr>
+</th>
+<%
+	ArrayList<Student> studList=(ArrayList<Student>)request.getAttribute("studentList");
+	for(Student s : studList)
+	{
+	%>
+	<tr>
+		<td><%out.print(s.getName()); %></td>
+		<td><%out.print(s.getEmail());%></td>
+		</tr>
+		<%
+	}
+
+%>
+
+</table>
+</body>
+</html>
